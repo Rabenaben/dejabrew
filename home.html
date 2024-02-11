@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deja Brew Website</title>
+    <link rel="icon" href="/midterm part/website/pics/weblogo.png">
+    <link rel="stylesheet" href="/midterm part/website/css/home.css">
+    <link rel="stylesheet" href="/midterm part/bootstrap-5.3.2-dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div id="left-bg"></div>
+
+    <header class="container">
+        <div class="d-flex align-items-center">
+            <img id="company-logo" src="/midterm part/website/pics/weblogo.png" alt="Company Logo">
+            <h1 id="company-name" style="color: darkgoldenrod;">Deja Brew</h1>
+        </div>
+        
+        <ul id="menu" class="nav">
+            <li><a href="#" class="nav-link"><b>Home</b></a></li>
+            <li><a href="menu.html" class="nav-link"><b>Menu</b></a></li>
+            <li><a href="location and contact.html" class="nav-link"><b>Location & Contacts</b></a></li>
+            <li><a href="about us.html" class="nav-link"><b>About Us</b></a></li>
+        </ul>
+    </header>
+
+    <div id="content" class="container">
+        <h1 class="fst-italic">Delicious Coffee in Your Area</h1>
+        <h1 class="fw-semibold">ORDER NOW!</h1>
+        <button id="order-btn" class="btn">HOW TO ORDER</button>
+    </div>
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="login-button" type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/midterm part/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        document.getElementById('order-btn').addEventListener('click', function() {
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        });
+        document.getElementById('login-button').addEventListener('click', function() {
+            document.getElementById('login-button').classList.remove('btn-hover');
+        });
+    </script>
+</body>
+</html>

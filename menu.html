@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deja Brew Website</title>
+    <link rel="icon" href="/midterm part/website/pics/weblogo.png">
+    <link rel="stylesheet" href="/midterm part/website/css/menu.css">
+    <link rel="stylesheet" href="/midterm part/bootstrap-5.3.2-dist/css/bootstrap.css">
+</head>
+
+<body>
+    <div id="left-bg"></div>
+
+    <header class="container">
+        <div class="d-flex align-items-center">
+            <img id="company-logo" src="/midterm part/website/pics/weblogo.png" alt="Company Logo">
+            <h1 id="company-name" style="color: darkgoldenrod;">Deja Brew</h1>
+        </div>
+        
+        <ul id="menu" class="nav">
+            <li><a href="home.html" class="nav-link"><b>Home</b></a></li>
+            <li><a href="#" class="nav-link"><b>Menu</b></a></li>
+            <li><a href="location and contact.html" class="nav-link"><b>Location & Contacts</b></a></li>
+            <li><a href="about us.html" class="nav-link"><b>About Us</b></a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="input-group mt-3">
+            <input type="text" id="search-bar" class="form-control" placeholder="Search Drinks">
+            <button class="btn btn-primary" id="search-button" onclick="handleSearch()">🔍</button>
+        </div>
+    </div>
+
+    <div id="content" class="container">
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink1.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Classic Iced Coffee</h3>
+            <p><b>Price: ₱150</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink2.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Classic Frapuccino</h3>
+            <p><b>Price: ₱180</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink3.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Java Chip Frapuccino</h3>
+            <p><b>Price: ₱195</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink4.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Vegetarian Shakeo</h3>
+            <p><b>Price: ₱180</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink5.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Oreo Milkshake</h3>
+            <p><b>Price: ₱210</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink6.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Classic Coffee</h3>
+            <p><b>Price: ₱155</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink7.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Classic Macchiato</h3>
+            <p><b>Price: ₱125</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+        <div class="drink">
+            <img src="/midterm part/website/pics/drink8.png" class="img-fluid" alt="Iced Coffee">
+            <h3>Classic Moccacino</h3>
+            <p><b>Price: ₱180</b></p>
+            <button class="btn btn-success" onclick="">Order</button>
+        </div>
+    </div>
+
+    <script src="/midterm part/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function handleSearch() {
+        var searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        var drinks = document.getElementsByClassName('drink');
+
+        for (var i = 0; i < drinks.length; i++) {
+            var drinkName = drinks[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (drinkName.includes(searchTerm)) {
+                drinks[i].style.display = 'block';
+            } else {
+                drinks[i].style.display = 'none';
+            }
+        }
+    }
+    </script>
+</body>
+</html>
