@@ -25,11 +25,18 @@
     </header>
 
     <div id="content" class="container">
-        <h1 class="fst-italic">Delicious Coffee in Your Area</h1>
-        <h1 class="fw-semibold">ORDER NOW!</h1>
-        <button id="order-btn" class="btn">HOW TO ORDER</button>
+        <div class="d-block d-md-none"> <!-- Visible on extra small and small devices only -->
+            <h1 class="fst-italic">Delicious Coffee in Your Area</h1>
+            <h1 class="fw-semibold">ORDER NOW!</h1>
+            <button id="order-btn" class="btn">HOW TO ORDER</button>
+        </div>
+        <div class="d-none d-md-block"> <!-- Hidden on extra small and small devices -->
+            <h1 class="fst-italic">Delicious Coffee in Your Area</h1>
+            <h1 class="fw-semibold">ORDER NOW!</h1>
+            <button id="order-btn" class="btn">HOW TO ORDER</button>
+        </div>
     </div>
-    
+
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
