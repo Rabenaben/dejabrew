@@ -1,0 +1,74 @@
+body {
+    background-image: url("/midterm part/website/pics/webbgimg1.png");
+    background-size: cover;
+}
+
+#right-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background-image: url("/midterm part/website/pics/webbgimg(2).png");
+    background-size: cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+}
+
+#company-logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#company-name {
+    font-size: 18px;
+}
+
+#menu li a:hover {
+    background-color: rgb(27, 27, 26);
+}
+
+#menu a {
+    color: #FFF;
+}
+
+#map {
+    max-width: 100%;
+    height: auto;
+    
+}
+#contacts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.contact-logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-logo:hover {
+    opacity: 0.8;
+}
+
+.contact-link:hover .contact-logo {
+    filter: brightness(0) invert(1);
+}
+
+.contact-link:hover div {
+    color: white;
+}
