@@ -1,0 +1,98 @@
+body {
+    background-image: url("/midterm part/website/pics/webbgimg1.png");
+    background-size: cover;
+}
+
+#left-bg {
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    background-image: url("/midterm part/website/pics/webbgimg(1).png");
+    background-size: contain;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#company-logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#company-name {
+    font-size: 18px;
+}
+
+#menu li a:hover {
+    background-color: rgb(27, 27, 26);
+}
+
+#menu a {
+    color: #FFF;
+}
+
+#search-bar {
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+#search-button {
+    background-color: rgb(239, 239, 231);
+    top: 5px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.drink {
+    width: 200px;
+    border-radius: 25px;
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.drink:hover {
+    transform: scale(1.1);
+}
+
+.drink:hover::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.drink.clicked {
+    animation: clickAnimation 0.3s ease-in-out;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
